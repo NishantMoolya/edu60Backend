@@ -19,6 +19,10 @@ app.get('/', (req,res) => {res.status(200).send('hello bro')});
 
 // example to use routers
 // app.use('/v1/api/user', userRouter);
+const quizRouter = require('./routers/quizRouter'); 
+
+//  the quiz router
+app.use('/v1/api/reels', quizRouter); 
 
 app.listen(port,() => console.log(`server is running at port:${port}`));
 
